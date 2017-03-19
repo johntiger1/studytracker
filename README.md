@@ -1,5 +1,11 @@
 # studytracker
 
+Winner of CSSU x Connected Lab Hack Night March 2017 -- "Most useful tool for Students" category
+
+See it in action here:
+https://studytracker-75b82.firebaseapp.com/
+
+
 Lessons:
 documentgetelementbyID to interface between javascript and html
 lots of firebase intricacies (for example, can only have one "type" of data (so that having "date" and "start" and "end" will not work))
