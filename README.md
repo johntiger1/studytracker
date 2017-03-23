@@ -16,3 +16,6 @@ https://studytracker-75b82.firebaseapp.com/
 - prototype is the JS way of classes and such
 - after doing this, this.study_stop = document.getElementById('button2');
   can modify many things about it! For example, make it hidden, make it larger etc.
+
+Thanks to this resource
+https://codelabs.developers.google.com/codelabs/firebase-web/#5
