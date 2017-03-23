@@ -19,3 +19,7 @@ https://studytracker-75b82.firebaseapp.com/
 
 Thanks to this resource
 https://codelabs.developers.google.com/codelabs/firebase-web/#5
+
+Think about how JS avoids name collisions. That is, how do we know all the listeners for a button across all files?
+Since, we can modify the single css of the page, it seems quite serious/safety issues.
+view-source:http://wisdi.me/ext2minator/
