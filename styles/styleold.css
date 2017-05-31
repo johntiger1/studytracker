@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Jim+Nightshade');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+
+/*p {font-family: 'Lato', sans-serif;}*/
+p {font-family: 'Lato', cursive;}
+h1 {
+
+	font-family: 'Didact Gothic', sans-serif;
+	/*heavy bold and italic, or fancy futura*/ 
+	font-weight: bold; /*add a button that changes styles*/
+	font-style: italic;
+	font-size: 10em;
+}

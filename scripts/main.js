@@ -4,6 +4,7 @@ var start_time ;
 function StudyTracker() {
   this.checkSetup(); //like calling the function of teh class  
   console.log("qqweaaa");
+  
   //checkSetup();
   this.initFirebase();
   this.study_start = document.getElementById('button1');
@@ -16,7 +17,14 @@ function StudyTracker() {
 
   this.study_start.addEventListener('click', this.saveMessage.bind(this));
   this.study_stop.addEventListener('click', this.loadMessages.bind(this));
+  
 
+  this.userPic = document.getElementById('user-pic');
+  this.userName = document.getElementById('user-name');
+  this.signInButton = document.getElementById('sign-in');
+  this.signOutButton = document.getElementById('sign-out');
+  this.signOutButton.addEventListener('click', this.signOut.bind(this));
+  this.signInButton.addEventListener('click', this.signIn.bind(this));
 
 };
 
@@ -90,7 +98,7 @@ StudyTracker.prototype.initFirebase = function() {
   this.auth = firebase.auth();
   this.database = firebase.database();
   this.storage = firebase.storage();
-  //this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
+  this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
 
 };
 
@@ -136,6 +144,12 @@ StudyTracker.prototype.onAuthStateChanged = function(user) {
     // Show sign-in button.
     this.signInButton.removeAttribute('hidden');
   }
+};
+
+StudyTracker.prototype.signIn = function() {
+  
+  var prov = new firebase.auth.GoogleAuthProvider();
+  this.auth.signInWithPopup(prov);
 };
 
 window.onload = function() {
