@@ -9,6 +9,7 @@ https://studytracker-75b82.firebaseapp.com/
 
 
 ### Lessons:
+- need to add the FB script to your index.html
 - need to include lots of stuff from google cdn to get the snackbar for example
 - documentgetelementbyID to interface between javascript and html
 - lots of firebase intricacies (for example, can only have one "type" of data (so that having "date" and "start" and "end" will not work))
