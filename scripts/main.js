@@ -4,9 +4,9 @@ var start_time ;
 function StudyTracker() {
   this.checkSetup(); //like calling the function of teh class  
   console.log("qqweaaa");
-  
+
   //checkSetup();
-  this.initFirebase();
+
   this.study_start = document.getElementById('button1');
 
   //"Passes" this into the function
@@ -26,6 +26,8 @@ function StudyTracker() {
   this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
 
+  this.initFirebase();
+
 };
 
 var start_handler = function()
@@ -42,6 +44,12 @@ var stop_handler = function()
   //this.study_start.removeAttribute('hidden');
   document.getElementById("timee").innerHTML = start_time.toString();
 }
+StudyTracker.prototype.checkSignedInWithMessage = function() {
+  // Return true if the user is signed in Firebase
+  if (this.auth.currentUser) {
+    return true;
+  }
+};
 
 // Loads chat messages history and listens for upcoming ones.
 StudyTracker.prototype.loadMessages = function() {
@@ -152,9 +160,15 @@ StudyTracker.prototype.signIn = function() {
   this.auth.signInWithPopup(prov);
 };
 
+// Signs-out of Friendly Chat.
+StudyTracker.prototype.signOut = function() {
+  // Sign out of Firebase.
+  this.auth.signOut();
+};
+
 window.onload = function() {
   window.studyTracker = new StudyTracker(); //we NEED this!
-};
+}
 
 
 
