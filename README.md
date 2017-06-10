@@ -9,6 +9,7 @@ https://studytracker-75b82.firebaseapp.com/
 
 
 ### Lessons:
+- Turns out it was something small: malformed HTML (closing non matching tags), JS (unclosed brace open), and then another JS (using FriendlyChat instead of StudyTracker prototype)  
 - need to add the FB script to your index.html
 - need to include lots of stuff from google cdn to get the snackbar for example
 - documentgetelementbyID to interface between javascript and html
